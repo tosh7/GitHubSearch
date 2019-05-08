@@ -1,4 +1,5 @@
 PODS:
+  - DZNEmptyDataSet (1.8.1)
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
@@ -7,23 +8,26 @@ PODS:
   - RxSwift (4.5.0)
 
 DEPENDENCIES:
+  - DZNEmptyDataSet
   - R.swift
   - RxCocoa
   - RxSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - DZNEmptyDataSet
     - R.swift
     - R.swift.Library
     - RxCocoa
     - RxSwift
 
 SPEC CHECKSUMS:
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
 
-PODFILE CHECKSUM: 1c5ebc1aa1ee446c1d1cdef8f040d808ced71534
+PODFILE CHECKSUM: 16e9339c5c4eb5dbc10153eaa397795c671a921b
 
 COCOAPODS: 1.5.3

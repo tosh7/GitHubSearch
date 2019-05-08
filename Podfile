@@ -7,5 +7,6 @@ target 'GitHubSearch' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'R.swift'
+  pod 'DZNEmptyDataSet'
 
 end
