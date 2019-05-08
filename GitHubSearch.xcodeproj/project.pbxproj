@@ -12,6 +12,7 @@
 		2B741EF2228300700051108B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B741EF0228300700051108B /* Main.storyboard */; };
 		2B741EF4228300710051108B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B741EF3228300710051108B /* Assets.xcassets */; };
 		2B741EF7228300710051108B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B741EF5228300710051108B /* LaunchScreen.storyboard */; };
+		2B741F03228315480051108B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B741F02228315480051108B /* R.generated.swift */; };
 		B38468231BD702D90155592C /* Pods_GitHubSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAD1173E9CB03C35D2B5459 /* Pods_GitHubSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		2B741EF3228300710051108B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B741EF6228300710051108B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B741EF8228300710051108B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B741F02228315480051108B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		6EAD1173E9CB03C35D2B5459 /* Pods_GitHubSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78638AA01E8C69405EF12D07 /* Pods-GitHubSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubSearch/Pods-GitHubSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		796D36927090643D6D9B873B /* Pods-GitHubSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubSearch/Pods-GitHubSearch.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 		2B741EE0228300700051108B = {
 			isa = PBXGroup;
 			children = (
+				2B741F02228315480051108B /* R.generated.swift */,
 				2B741EEB228300700051108B /* GitHubSearch */,
 				2B741EEA228300700051108B /* Products */,
 				2952CD7BE4AFC46911B3D8EF /* Pods */,
@@ -78,14 +81,38 @@
 		2B741EEB228300700051108B /* GitHubSearch */ = {
 			isa = PBXGroup;
 			children = (
-				2B741EEC228300700051108B /* AppDelegate.swift */,
-				2B741EEE228300700051108B /* ViewController.swift */,
-				2B741EF0228300700051108B /* Main.storyboard */,
-				2B741EF3228300710051108B /* Assets.xcassets */,
-				2B741EF5228300710051108B /* LaunchScreen.storyboard */,
-				2B741EF8228300710051108B /* Info.plist */,
+				2B741EFF228312C00051108B /* Resources */,
+				2B741EFE228312BC0051108B /* Sources */,
 			);
 			path = GitHubSearch;
+			sourceTree = "<group>";
+		};
+		2B741EFE228312BC0051108B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2B741F00228312DB0051108B /* View */,
+				2B741EEC228300700051108B /* AppDelegate.swift */,
+				2B741EEE228300700051108B /* ViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		2B741EFF228312C00051108B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B741EF3228300710051108B /* Assets.xcassets */,
+				2B741EF8228300710051108B /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2B741F00228312DB0051108B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B741EF0228300700051108B /* Main.storyboard */,
+				2B741EF5228300710051108B /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +123,7 @@
 			buildConfigurationList = 2B741EFB228300710051108B /* Build configuration list for PBXNativeTarget "GitHubSearch" */;
 			buildPhases = (
 				C588619E727FF7F3C6F3253A /* [CP] Check Pods Manifest.lock */,
+				2B741F01228313880051108B /* R.Swift */,
 				2B741EE5228300700051108B /* Sources */,
 				2B741EE6228300700051108B /* Frameworks */,
 				2B741EE7228300700051108B /* Resources */,
@@ -157,6 +185,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2B741F01228313880051108B /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.Swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		8B36B77E798BBCEB862F6977 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,6 +262,7 @@
 			files = (
 				2B741EEF228300700051108B /* ViewController.swift in Sources */,
 				2B741EED228300700051108B /* AppDelegate.swift in Sources */,
+				2B741F03228315480051108B /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +411,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56787CM63P;
-				INFOPLIST_FILE = GitHubSearch/Info.plist;
+				INFOPLIST_FILE = GitHubSearch/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -371,7 +420,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tosh7.GitHubSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -382,7 +431,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56787CM63P;
-				INFOPLIST_FILE = GitHubSearch/Info.plist;
+				INFOPLIST_FILE = GitHubSearch/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -391,7 +440,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tosh7.GitHubSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
