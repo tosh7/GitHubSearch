@@ -20,7 +20,7 @@ class SearchViewController: UIViewController {
             tableView.delegate   = self
         }
     }
-    var repos: [Repository]!
+    var repos: [Repository] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +32,14 @@ extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return repos.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        
+        return cell!
     }
-    
-    
+
+
 }
 
 extension SearchViewController: UITableViewDelegate {

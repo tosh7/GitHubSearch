@@ -16,6 +16,32 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
+  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  struct nib {
+    /// Nib `CustomTableViewCell`.
+    static let customTableViewCell = _R.nib._CustomTableViewCell()
+    
+    /// `UINib(name: "CustomTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.customTableViewCell) instead")
+    static func customTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.customTableViewCell)
+    }
+    
+    static func customTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CustomTableViewCell? {
+      return R.nib.customTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CustomTableViewCell
+    }
+    
+    fileprivate init() {}
+  }
+  
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  struct reuseIdentifier {
+    /// Reuse identifier `cell`.
+    static let cell: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "cell")
+    
+    fileprivate init() {}
+  }
+  
   /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
@@ -54,6 +80,21 @@ struct _R: Rswift.Validatable {
     try storyboard.validate()
   }
   
+  struct nib {
+    struct _CustomTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "CustomTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CustomTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CustomTableViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    fileprivate init() {}
+  }
+  
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try launchScreen.validate()
@@ -75,7 +116,7 @@ struct _R: Rswift.Validatable {
     }
     
     struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = ViewController
+      typealias InitialController = SearchViewController
       
       let bundle = R.hostingBundle
       let name = "Main"
