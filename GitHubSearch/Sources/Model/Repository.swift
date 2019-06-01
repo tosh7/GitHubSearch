@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Repository {
+struct Repository: Codable {
     
     var repositoryName: String!
     
