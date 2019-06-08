@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B53124622ABE425003DE3BC /* DecodeDataparser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B53124522ABE425003DE3BC /* DecodeDataparser.swift */; };
 		2B53124822ABE4A2003DE3BC /* GitHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B53124722ABE4A2003DE3BC /* GitHubRequest.swift */; };
 		2B741EED228300700051108B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B741EEC228300700051108B /* AppDelegate.swift */; };
-		2B741EEF228300700051108B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B741EEE228300700051108B /* SearchViewController.swift */; };
 		2B741EF2228300700051108B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B741EF0228300700051108B /* Main.storyboard */; };
 		2B741EF4228300710051108B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B741EF3228300710051108B /* Assets.xcassets */; };
 		2B741EF7228300710051108B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B741EF5228300710051108B /* LaunchScreen.storyboard */; };
@@ -19,15 +17,15 @@
 		2B741F0C22831A810051108B /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B741F0A22831A810051108B /* CustomTableViewCell.xib */; };
 		2B741F0E22831C560051108B /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B741F0D22831C560051108B /* Items.swift */; };
 		2B8FF5AA22AC12080026FB8A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8FF5A922AC12080026FB8A /* Utilities.swift */; };
+		2B8FF5B022AC22F40026FB8A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8FF5AF22AC22F40026FB8A /* SearchViewController.swift */; };
+		2B8FF5B322AC248A0026FB8A /* DecodeDataParser..swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8FF5B222AC24890026FB8A /* DecodeDataParser..swift */; };
 		B38468231BD702D90155592C /* Pods_GitHubSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAD1173E9CB03C35D2B5459 /* Pods_GitHubSearch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2B53124522ABE425003DE3BC /* DecodeDataparser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeDataparser.swift; sourceTree = "<group>"; };
 		2B53124722ABE4A2003DE3BC /* GitHubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRequest.swift; sourceTree = "<group>"; };
 		2B741EE9228300700051108B /* GitHubSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B741EEC228300700051108B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B741EEE228300700051108B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2B741EF1228300700051108B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B741EF3228300710051108B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B741EF6228300710051108B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +35,8 @@
 		2B741F0A22831A810051108B /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		2B741F0D22831C560051108B /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		2B8FF5A922AC12080026FB8A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		2B8FF5AF22AC22F40026FB8A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		2B8FF5B222AC24890026FB8A /* DecodeDataParser..swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodeDataParser..swift; sourceTree = "<group>"; };
 		6EAD1173E9CB03C35D2B5459 /* Pods_GitHubSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78638AA01E8C69405EF12D07 /* Pods-GitHubSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubSearch/Pods-GitHubSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		796D36927090643D6D9B873B /* Pods-GitHubSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubSearch/Pods-GitHubSearch.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,7 +74,9 @@
 		2B53124422AB852D003DE3BC /* API */ = {
 			isa = PBXGroup;
 			children = (
-				2B741F0D22831C560051108B /* Items.swift */,
+				2B8FF5AB22AC21710026FB8A /* Core */,
+				2B8FF5AC22AC21820026FB8A /* Request */,
+				2B8FF5AD22AC218A0026FB8A /* Response */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -113,8 +115,7 @@
 				2B741EEC228300700051108B /* AppDelegate.swift */,
 				2B741F00228312DB0051108B /* View */,
 				2B741F0822831A3C0051108B /* Cell */,
-				2B741F06228315E00051108B /* ViewController */,
-				2B741F05228315DD0051108B /* ViewModel */,
+				2B8FF5AE22AC22F40026FB8A /* ViewController */,
 				2B741F04228315DB0051108B /* Model */,
 				2B53124422AB852D003DE3BC /* API */,
 				2B8FF5A822AC11C10026FB8A /* Enum */,
@@ -144,27 +145,8 @@
 		2B741F04228315DB0051108B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2B53124522ABE425003DE3BC /* DecodeDataparser.swift */,
-				2B53124722ABE4A2003DE3BC /* GitHubRequest.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		2B741F05228315DD0051108B /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ViewModel;
-			path = "New Group/ViewModel";
-			sourceTree = "<group>";
-		};
-		2B741F06228315E00051108B /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				2B741EEE228300700051108B /* SearchViewController.swift */,
-			);
-			name = ViewController;
-			path = "New Group/New Group/ViewController";
 			sourceTree = "<group>";
 		};
 		2B741F0722831A220051108B /* Cell */ = {
@@ -189,6 +171,38 @@
 				2B8FF5A922AC12080026FB8A /* Utilities.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		2B8FF5AB22AC21710026FB8A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2B8FF5B222AC24890026FB8A /* DecodeDataParser..swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2B8FF5AC22AC21820026FB8A /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				2B53124722ABE4A2003DE3BC /* GitHubRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		2B8FF5AD22AC218A0026FB8A /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				2B741F0D22831C560051108B /* Items.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		2B8FF5AE22AC22F40026FB8A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2B8FF5AF22AC22F40026FB8A /* SearchViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,10 +342,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B741EEF228300700051108B /* SearchViewController.swift in Sources */,
 				2B741EED228300700051108B /* AppDelegate.swift in Sources */,
-				2B53124622ABE425003DE3BC /* DecodeDataparser.swift in Sources */,
+				2B8FF5B022AC22F40026FB8A /* SearchViewController.swift in Sources */,
 				2B741F0E22831C560051108B /* Items.swift in Sources */,
+				2B8FF5B322AC248A0026FB8A /* DecodeDataParser..swift in Sources */,
 				2B53124822ABE4A2003DE3BC /* GitHubRequest.swift in Sources */,
 				2B741F0B22831A810051108B /* CustomTableViewCell.swift in Sources */,
 				2B8FF5AA22AC12080026FB8A /* Utilities.swift in Sources */,
