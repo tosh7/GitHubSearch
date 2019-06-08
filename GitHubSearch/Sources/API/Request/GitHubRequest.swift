@@ -13,7 +13,7 @@ protocol GitHubRequest: Request { }
 
 extension GitHubRequest {
     var baseURL: URL {
-        return URL(string: GitHubAPI.baseUrl.rawValue)!
+        return URL(string: GitHub.baseUrl.rawValue)!
     }
 }
 

@@ -20,7 +20,7 @@ final class SearchViewController: UIViewController {
             tableView.delegate   = self
         }
     }
-    var repos: Repositories!
+    var repos: SearchRepositoryResponse!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum GitHubAPI: String {
+enum GitHub: String {
     
     case baseUrl = "https://api.github.com"
     case repositoryPath = "/search/repositories"

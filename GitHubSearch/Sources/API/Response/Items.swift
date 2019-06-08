@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Repositories: Codable {
+struct SearchRepositoryResponse: Codable {
     
     var totalCount: Int
     var incompletResults: Bool
