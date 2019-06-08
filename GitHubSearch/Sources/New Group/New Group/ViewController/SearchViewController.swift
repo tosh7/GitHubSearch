@@ -12,7 +12,7 @@ import DZNEmptyDataSet
 import RxSwift
 import RxCocoa
 
-class SearchViewController: UIViewController {
+final class SearchViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -20,7 +20,7 @@ class SearchViewController: UIViewController {
             tableView.delegate   = self
         }
     }
-    var repos: [Repository] = []
+    var repos: Repositories!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repos.count
+        return repos.totalCount
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -38,7 +38,6 @@ extension SearchViewController: UITableViewDataSource {
         
         return cell!
     }
-
 
 }
 
