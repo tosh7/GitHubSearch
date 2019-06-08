@@ -11,6 +11,7 @@ import UIKit
 import DZNEmptyDataSet
 import RxSwift
 import RxCocoa
+import APIKit
 
 final class SearchViewController: UIViewController {
 
@@ -20,17 +21,27 @@ final class SearchViewController: UIViewController {
             tableView.delegate   = self
         }
     }
-    var repos: SearchRepositoryResponse!
+    var repos: SearchRepositoryResponse?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Session.send(GitHubAPI.SearchRepository(query: "Guruppu")) { result in
+            print(result)
+            switch result {
+            case .success(let response):
+                print(response)
+            
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
 extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repos.totalCount
+        return repos?.totalCount ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

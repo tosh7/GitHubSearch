@@ -12,10 +12,15 @@ import APIKit
 final class GitHubAPI {
     private init() {}
     
+    //classの中にstructを置くことによっていろんな種類のAPIを叩けるようになる
     struct SearchRepository: GitHubRequest {
+        
+        let query: String
+//        let page: Int = 1   //一旦一ページに＼してるけど、ロードできたらなお良い
         
         typealias Response = SearchRepositoryResponse
         
+        //Getterにしておかないと通信を行う際にお隊を入れる必要が出てくる
         var method: HTTPMethod {
             return .get
         }
@@ -26,7 +31,9 @@ final class GitHubAPI {
         
         var parameters: Any? {
             return [
-                "q": "Guruppu"
+                "q": "rxswift",
+                "sort": "starts",
+                "order": "desc"
             ]
         }
     }
