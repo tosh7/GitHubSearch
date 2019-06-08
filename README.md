@@ -14,6 +14,15 @@ RxSwiftを使用してGitHubのレポジトリを検索してみる
 - giboを使用しgitignoreを作成
 - SwiftLint入れていない(余裕があったら使用してみたい)
 
+# GitHubSearchのAPIについて
+- get通信
+- base URL : https://api.github.com
+- path : /search/repositories
+## パラメーター（全てString）
+- q: **Required** 検索ワード
+- sort: starts, forks, help-wanted-issues uopdated
+- order: 昇順、降順。sortがない場合は無視される。
+
 # GitHubSearchのJSONについて
 簡単に帰ってくるJSONのモデルを追加しておく。
 ```
