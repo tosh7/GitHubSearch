@@ -7,14 +7,22 @@
 //
 
 import Foundation
-import APIKit
 
-final class DecodeDataParser: DataParser {
-    var contentType: String? {
-        return "application/json"
-    }
+struct JSONParser {
     
-    func parse(data: Data) throws -> Any {
-        return data
+    static func parse(data: Data) -> Any {
+        
+        var repositories: Repositories!
+        
+        let jsonDecoder = JSONDecoder()
+        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        do {
+            repositories = try jsonDecoder.decode(Repositories.self, from: data)
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        return repositories!
     }
 }

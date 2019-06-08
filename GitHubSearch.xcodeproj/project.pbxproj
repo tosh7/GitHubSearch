@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		2B741F0B22831A810051108B /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B741F0922831A810051108B /* CustomTableViewCell.swift */; };
 		2B741F0C22831A810051108B /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B741F0A22831A810051108B /* CustomTableViewCell.xib */; };
 		2B741F0E22831C560051108B /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B741F0D22831C560051108B /* Items.swift */; };
+		2B8FF5AA22AC12080026FB8A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8FF5A922AC12080026FB8A /* Utilities.swift */; };
 		B38468231BD702D90155592C /* Pods_GitHubSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAD1173E9CB03C35D2B5459 /* Pods_GitHubSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		2B741F0922831A810051108B /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		2B741F0A22831A810051108B /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		2B741F0D22831C560051108B /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		2B8FF5A922AC12080026FB8A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6EAD1173E9CB03C35D2B5459 /* Pods_GitHubSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78638AA01E8C69405EF12D07 /* Pods-GitHubSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubSearch/Pods-GitHubSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		796D36927090643D6D9B873B /* Pods-GitHubSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubSearch/Pods-GitHubSearch.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,11 +112,12 @@
 			children = (
 				2B741EEC228300700051108B /* AppDelegate.swift */,
 				2B741F00228312DB0051108B /* View */,
+				2B741F0822831A3C0051108B /* Cell */,
 				2B741F06228315E00051108B /* ViewController */,
 				2B741F05228315DD0051108B /* ViewModel */,
-				2B53124422AB852D003DE3BC /* API */,
 				2B741F04228315DB0051108B /* Model */,
-				2B741F0822831A3C0051108B /* Cell */,
+				2B53124422AB852D003DE3BC /* API */,
+				2B8FF5A822AC11C10026FB8A /* Enum */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -178,6 +181,14 @@
 				2B741F0922831A810051108B /* CustomTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		2B8FF5A822AC11C10026FB8A /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				2B8FF5A922AC12080026FB8A /* Utilities.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +276,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -323,6 +334,7 @@
 				2B741F0E22831C560051108B /* Items.swift in Sources */,
 				2B53124822ABE4A2003DE3BC /* GitHubRequest.swift in Sources */,
 				2B741F0B22831A810051108B /* CustomTableViewCell.swift in Sources */,
+				2B8FF5AA22AC12080026FB8A /* Utilities.swift in Sources */,
 				2B741F03228315480051108B /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,17 +10,23 @@ import Foundation
 
 struct Repositories: Codable {
     
-    var totalCount: Int!
-    var incompletResults: Bool!
-    var items: [Items]!
+    var totalCount: Int
+    var incompletResults: Bool
+    var items: [Items]
     
 }
 
 struct Items: Codable {
     
-    var name: String!
-    var description: String!
-    var url: String!
+    var name: String
+    var description: String
+    var url: String
+    var owner: owner
     
+}
+
+struct owner: Codable {
+    
+    var login: String
     
 }
