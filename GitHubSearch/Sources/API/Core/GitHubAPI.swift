@@ -33,8 +33,7 @@ final class GitHubAPI {
         var parameters: Any? {
             return [
                 "q": "rxswift",
-                "sort": "starts",
-                "order": "desc"
+                "page": 1
             ]
         }
     }
