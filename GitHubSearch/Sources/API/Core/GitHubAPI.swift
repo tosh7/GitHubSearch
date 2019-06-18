@@ -16,7 +16,7 @@ final class GitHubAPI {
     struct SearchRepository: GitHubRequest {
         
         let query: String
-//        let page: Int = 1   //一旦一ページに＼してるけど、ロードできたらなお良い
+//        let page: Int = 1   //一旦一ページにしてるけど、ロードできたらなお良い
         
         typealias Response = SearchRepositoryResponse
         
@@ -25,9 +25,10 @@ final class GitHubAPI {
             return .get
         }
         
-        var path: String {
-            return GitHub.repositoryPath.rawValue
-        }
+//        var path: String {
+//            return GitHub.repositoryPath.rawValue
+//        }
+        let path: String = "/search/repositories"
         
         var parameters: Any? {
             return [
