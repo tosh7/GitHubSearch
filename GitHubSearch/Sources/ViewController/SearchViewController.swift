@@ -26,7 +26,7 @@ final class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Session.send(GitHubAPI.SearchRepository(query: "Guruppu")) { result in
+        Session.send(GitHubAPI.SearchRepository(query: "RxSwift")) { result in
             switch result {
             case .success(let response):
                 self.repos = response
