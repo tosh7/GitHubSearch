@@ -7,6 +7,7 @@ PODS:
   - RxCocoa (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
   - RxSwift (4.5.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - APIKit
@@ -14,6 +15,7 @@ DEPENDENCIES:
   - R.swift
   - RxCocoa
   - RxSwift
+  - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -23,6 +25,7 @@ SPEC REPOS:
     - R.swift.Library
     - RxCocoa
     - RxSwift
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   APIKit: b27d79b022733b2f50e7a092e67c4cb9ea30f968
@@ -31,7 +34,8 @@ SPEC CHECKSUMS:
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: c1bb2dc24f6903cd33a0bdb14881669cdf61dcda
+PODFILE CHECKSUM: 5c8b5a6f6bd573dafe2cc674bc8c7562ccbe0723
 
-COCOAPODS: 1.7.1
+COCOAPODS: 1.7.2

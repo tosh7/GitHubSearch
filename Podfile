@@ -9,5 +9,6 @@ target 'GitHubSearch' do
   pod 'R.swift'
   pod 'DZNEmptyDataSet'
   pod 'APIKit'
+  pod 'SVProgressHUD'
 
 end
