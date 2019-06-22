@@ -11,7 +11,7 @@ import APIKit
 
 struct DecodeDataParser: DataParser {
     var contentType: String? {
-        return "appication/json"
+        return "application/json"
     }
     
     func parse(data: Data) throws -> Any {
