@@ -42,7 +42,13 @@ final class SearchViewController: UIViewController {
 
 extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repos?.totalCount ?? 0
+        guard let _repos = repos else { return 0 }
+        
+        if _repos.totalCount >= 30 {
+            return 30
+        } else {
+            return _repos.totalCount
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
