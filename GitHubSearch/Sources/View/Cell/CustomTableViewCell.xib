@@ -20,23 +20,23 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdG-0u-uV1">
-                        <rect key="frame" x="25" y="0.0" width="481" height="50.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                        <rect key="frame" x="25" y="0.0" width="481" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="HGs-Am-8Ya">
-                        <rect key="frame" x="25" y="58" width="481" height="20.5"/>
+                        <rect key="frame" x="25" y="40" width="481" height="16"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFp-JO-xN2">
-                                <rect key="frame" x="0.0" y="0.0" width="225.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="0.0" width="225.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tcb-eu-9vf">
-                                <rect key="frame" x="255.5" y="0.0" width="225.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="255.5" y="0.0" width="225.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -48,7 +48,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="HGs-Am-8Ya" secondAttribute="trailing" id="D7b-bR-Vwq"/>
-                    <constraint firstItem="HGs-Am-8Ya" firstAttribute="top" secondItem="xdG-0u-uV1" secondAttribute="bottom" constant="7.5" id="F3m-WX-3ri"/>
+                    <constraint firstItem="HGs-Am-8Ya" firstAttribute="top" secondItem="xdG-0u-uV1" secondAttribute="bottom" constant="10" id="F3m-WX-3ri"/>
                     <constraint firstItem="HGs-Am-8Ya" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="Fzr-CC-hpC"/>
                     <constraint firstAttribute="trailing" secondItem="xdG-0u-uV1" secondAttribute="trailing" id="Mmw-Wl-UBn"/>
                     <constraint firstItem="xdG-0u-uV1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="Xfv-rN-m06"/>

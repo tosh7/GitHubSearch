@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 import DZNEmptyDataSet
 import RxSwift
 import RxCocoa
@@ -19,6 +18,11 @@ final class SearchViewController: UIViewController {
         didSet {
             tableView.dataSource = self
             tableView.delegate   = self
+            tableView.register(
+                UINib(resource: R.nib.customTableViewCell),
+                forCellReuseIdentifier: "cell"
+            )
+            tableView.rowHeight = 60
         }
     }
     var repos: SearchRepositoryResponse?
@@ -52,14 +56,15 @@ extension SearchViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CustomTableViewCell
         if let _repos = repos {
-            cell?.textLabel?.text = _repos.items[indexPath.row].name
+            cell.nameLabel.text         = _repos.items[indexPath.row].name
+            cell.loginLabel.text        = _repos.items[indexPath.row].owner.login
+            cell.descriptionLabel.text  = _repos.items[indexPath.row].description
         }
         
-        return cell!
+        return cell
     }
-
 }
 
 extension SearchViewController: UITableViewDelegate {
