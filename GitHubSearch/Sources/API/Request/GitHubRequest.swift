@@ -12,12 +12,8 @@ import APIKit
 protocol GitHubRequest: Request { }
 
 extension GitHubRequest {
-//    var baseURL: URL {
-//        return URL(string: GitHub.baseUrl.rawValue)!
-//    }
-    
     var baseURL: URL {
-        return URL(string: "https://api.github.com")!
+        return URL(string: GitHub.baseUrl.rawValue)!
     }
 }
 

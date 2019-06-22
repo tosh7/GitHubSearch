@@ -25,10 +25,9 @@ final class GitHubAPI {
             return .get
         }
         
-//        var path: String {
-//            return GitHub.repositoryPath.rawValue
-//        }
-        let path: String = "/search/repositories"
+        var path: String {
+            return GitHub.repositoryPath.rawValue
+        }
         
         var parameters: Any? {
             return [

@@ -10,9 +10,9 @@ import Foundation
 
 struct SearchRepositoryResponse: Codable {
     
-    var totalCount: Int
-    var incompletResults: Bool
-    var items: [Items]
+//    var total_count: Int
+//    var incompletResults: Bool
+//    var items: [Items]
     
 }
 
