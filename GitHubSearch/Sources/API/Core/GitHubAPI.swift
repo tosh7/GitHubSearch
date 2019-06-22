@@ -31,7 +31,7 @@ final class GitHubAPI {
         
         var parameters: Any? {
             return [
-                "q": "rxswift",
+                "q": query,
                 "page": 1
             ]
         }
