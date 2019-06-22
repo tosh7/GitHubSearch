@@ -27,9 +27,10 @@ final class SearchViewController: UIViewController {
         super.viewDidLoad()
         
         Session.send(GitHubAPI.SearchRepository(query: "Guruppu")) { result in
-            print(result)
             switch result {
             case .success(let response):
+                self.repos = response
+                self.tableView.reloadData()
                 print(response)
             
             case .failure(let error):
@@ -41,11 +42,14 @@ final class SearchViewController: UIViewController {
 
 extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return repos?.totalCount ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        if let _repos = repos {
+            cell?.textLabel?.text = _repos.items[indexPath.row].name
+        }
         
         return cell!
     }
