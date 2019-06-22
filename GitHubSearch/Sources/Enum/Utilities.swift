@@ -14,3 +14,11 @@ enum GitHub: String {
     case repositoryPath = "/search/repositories"
     
 }
+
+enum LoadStatus: String {
+    
+    case loading = "ローディング中"
+    case nothing = "該当なし"
+    case fail    = "ロード失敗"
+    
+}

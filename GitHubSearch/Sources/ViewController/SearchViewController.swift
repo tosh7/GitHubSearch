@@ -11,6 +11,7 @@ import DZNEmptyDataSet
 import RxSwift
 import RxCocoa
 import APIKit
+import SVProgressHUD
 
 final class SearchViewController: UIViewController {
 
@@ -30,14 +31,22 @@ final class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Session.send(GitHubAPI.SearchRepository(query: "RxSwift")) { result in
+        SVProgressHUD.show(withStatus: LoadStatus.loading.rawValue)
+        
+        Session.send(GitHubAPI.SearchRepository(query: "giiisaaa")) { result in
             switch result {
             case .success(let response):
                 self.repos = response
                 self.tableView.reloadData()
                 print(response)
-            
+                SVProgressHUD.dismiss()
+                
+                if response.totalCount == 0 {
+                    SVProgressHUD.showError(withStatus: LoadStatus.nothing.rawValue)
+                }
+                
             case .failure(let error):
+                SVProgressHUD.showError(withStatus: LoadStatus.fail.rawValue)
                 print(error)
             }
         }
