@@ -24,16 +24,25 @@ final class SearchViewController: UIViewController {
                 forCellReuseIdentifier: "cell"
             )
             tableView.rowHeight = 60
+            tableView.tableHeaderView = searchController.searchBar
         }
     }
     var repos: SearchRepositoryResponse?
+    var searchController: UISearchController = UISearchController(searchResultsController: nil) {
+        didSet {
+            searchController.searchResultsUpdater = self
+            searchController.searchBar.sizeToFit()
+            searchController.dimsBackgroundDuringPresentation = false
+            searchController.hidesNavigationBarDuringPresentation = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         SVProgressHUD.show(withStatus: LoadStatus.loading.rawValue)
         
-        Session.send(GitHubAPI.SearchRepository(query: "giiisaaa")) { result in
+        Session.send(GitHubAPI.SearchRepository(query: "Rxswift")) { result in
             switch result {
             case .success(let response):
                 self.repos = response
@@ -77,6 +86,13 @@ extension SearchViewController: UITableViewDataSource {
 }
 
 extension SearchViewController: UITableViewDelegate {
+    
+}
+
+extension SearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        print(searchController.searchBar.text!)
+    }
     
 }
 
