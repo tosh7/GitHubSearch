@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B1AF6F422C28E1700C0FA1C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1AF6F322C28E1700C0FA1C /* SearchViewModel.swift */; };
+		2B1AF6F722C2925C00C0FA1C /* Session+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1AF6F622C2925C00C0FA1C /* Session+extension.swift */; };
 		2B53124822ABE4A2003DE3BC /* GitHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B53124722ABE4A2003DE3BC /* GitHubRequest.swift */; };
 		2B741EED228300700051108B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B741EEC228300700051108B /* AppDelegate.swift */; };
 		2B741EF2228300700051108B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B741EF0228300700051108B /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		2B1AF6F322C28E1700C0FA1C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		2B1AF6F622C2925C00C0FA1C /* Session+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+extension.swift"; sourceTree = "<group>"; };
 		2B53124722ABE4A2003DE3BC /* GitHubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRequest.swift; sourceTree = "<group>"; };
 		2B741EE9228300700051108B /* GitHubSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B741EEC228300700051108B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 			path = Model/ViewModel;
 			sourceTree = "<group>";
 		};
+		2B1AF6F522C2923C00C0FA1C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2B1AF6F622C2925C00C0FA1C /* Session+extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2B53124422AB852D003DE3BC /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +143,7 @@
 				2B741F04228315DB0051108B /* Model */,
 				2B53124422AB852D003DE3BC /* API */,
 				2B8FF5A822AC11C10026FB8A /* Enum */,
+				2B1AF6F522C2923C00C0FA1C /* Extensions */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -366,6 +377,7 @@
 				2B1AF6F422C28E1700C0FA1C /* SearchViewModel.swift in Sources */,
 				2B741F0B22831A810051108B /* CustomTableViewCell.swift in Sources */,
 				2B8FF5AA22AC12080026FB8A /* Utilities.swift in Sources */,
+				2B1AF6F722C2925C00C0FA1C /* Session+extension.swift in Sources */,
 				2B741F03228315480051108B /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

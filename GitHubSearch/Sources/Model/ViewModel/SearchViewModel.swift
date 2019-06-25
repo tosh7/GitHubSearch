@@ -12,4 +12,6 @@ import RxCocoa
 
 final class SearchViewModel {
     
+    let disposeBag = DisposeBag()
+    
 }

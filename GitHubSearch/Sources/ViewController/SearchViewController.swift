@@ -15,6 +15,10 @@ import SVProgressHUD
 
 final class SearchViewController: UIViewController {
     
+    private let viewModel = SearchViewModel()
+    
+    let disposeBag = DisposeBag()
+    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
