@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B1AF6F422C28E1700C0FA1C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1AF6F322C28E1700C0FA1C /* SearchViewModel.swift */; };
 		2B53124822ABE4A2003DE3BC /* GitHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B53124722ABE4A2003DE3BC /* GitHubRequest.swift */; };
 		2B741EED228300700051108B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B741EEC228300700051108B /* AppDelegate.swift */; };
 		2B741EF2228300700051108B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B741EF0228300700051108B /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B1AF6F322C28E1700C0FA1C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		2B53124722ABE4A2003DE3BC /* GitHubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRequest.swift; sourceTree = "<group>"; };
 		2B741EE9228300700051108B /* GitHubSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B741EEC228300700051108B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2B1AF6F222C28DFB00C0FA1C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2B1AF6F322C28E1700C0FA1C /* SearchViewModel.swift */,
+			);
+			name = ViewModel;
+			path = Model/ViewModel;
+			sourceTree = "<group>";
+		};
 		2B53124422AB852D003DE3BC /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +129,7 @@
 				2B741F00228312DB0051108B /* View */,
 				2B741F0822831A3C0051108B /* Cell */,
 				2B8FF5AE22AC22F40026FB8A /* ViewController */,
+				2B1AF6F222C28DFB00C0FA1C /* ViewModel */,
 				2B741F04228315DB0051108B /* Model */,
 				2B53124422AB852D003DE3BC /* API */,
 				2B8FF5A822AC11C10026FB8A /* Enum */,
@@ -351,6 +363,7 @@
 				2B741F0E22831C560051108B /* Items.swift in Sources */,
 				2B8FF5B322AC248A0026FB8A /* DecodeDataParser..swift in Sources */,
 				2B53124822ABE4A2003DE3BC /* GitHubRequest.swift in Sources */,
+				2B1AF6F422C28E1700C0FA1C /* SearchViewModel.swift in Sources */,
 				2B741F0B22831A810051108B /* CustomTableViewCell.swift in Sources */,
 				2B8FF5AA22AC12080026FB8A /* Utilities.swift in Sources */,
 				2B741F03228315480051108B /* R.generated.swift in Sources */,
