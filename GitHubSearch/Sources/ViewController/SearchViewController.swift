@@ -31,6 +31,7 @@ final class SearchViewController: UIViewController {
     var searchController: UISearchController = UISearchController(searchResultsController: nil) {
         didSet {
             searchController.searchResultsUpdater = self
+            searchController.delegate = self
             searchController.searchBar.sizeToFit()
             searchController.dimsBackgroundDuringPresentation = false
             searchController.hidesNavigationBarDuringPresentation = false
@@ -93,6 +94,10 @@ extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         print(searchController.searchBar.text!)
     }
+    
+}
+
+extension SearchViewController: UISearchControllerDelegate {
     
 }
 
