@@ -14,7 +14,7 @@ import APIKit
 import SVProgressHUD
 
 final class SearchViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
@@ -30,8 +30,6 @@ final class SearchViewController: UIViewController {
     var repos: SearchRepositoryResponse?
     var searchController: UISearchController = UISearchController(searchResultsController: nil) {
         didSet {
-            searchController.searchResultsUpdater = self
-            searchController.delegate = self
             searchController.searchBar.sizeToFit()
             searchController.dimsBackgroundDuringPresentation = false
             searchController.hidesNavigationBarDuringPresentation = false
@@ -41,25 +39,7 @@ final class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SVProgressHUD.show(withStatus: LoadStatus.loading.rawValue)
-        
-        Session.send(GitHubAPI.SearchRepository(query: "Rxswift")) { result in
-            switch result {
-            case .success(let response):
-                self.repos = response
-                self.tableView.reloadData()
-                print(response)
-                SVProgressHUD.dismiss()
-                
-                if response.totalCount == 0 {
-                    SVProgressHUD.showError(withStatus: LoadStatus.nothing.rawValue)
-                }
-                
-            case .failure(let error):
-                SVProgressHUD.showError(withStatus: LoadStatus.fail.rawValue)
-                print(error)
-            }
-        }
+        searchController.searchResultsUpdater = self
     }
 }
 
@@ -73,7 +53,7 @@ extension SearchViewController: UITableViewDataSource {
             return _repos.totalCount
         }
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CustomTableViewCell
         if let _repos = repos {
@@ -87,18 +67,40 @@ extension SearchViewController: UITableViewDataSource {
 }
 
 extension SearchViewController: UITableViewDelegate {
+}
+
+extension SearchViewController {
     
+    func updateResults(_ query: String) {
+        
+        if query != "" {
+            SVProgressHUD.show(withStatus: LoadStatus.loading.rawValue)
+            
+            Session.send(GitHubAPI.SearchRepository(query: query)) { result in
+                switch result {
+                case .success(let response):
+                    self.repos = response
+                    self.tableView.reloadData()
+                    print(response)
+                    SVProgressHUD.dismiss()
+                    
+                    if response.totalCount == 0 {
+                        SVProgressHUD.showError(withStatus: LoadStatus.nothing.rawValue)
+                    }
+                    
+                case .failure(let error):
+                    SVProgressHUD.showError(withStatus: LoadStatus.fail.rawValue)
+                    print(error)
+                }
+            }
+        }
+    }
 }
 
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        print(searchController.searchBar.text!)
+        updateResults(searchController.searchBar.text!)
     }
-    
-}
-
-extension SearchViewController: UISearchControllerDelegate {
-    
 }
 
 extension SearchViewController: DZNEmptyDataSetSource {

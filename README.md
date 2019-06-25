@@ -129,5 +129,9 @@ RxSwiftを使用してGitHubのレポジトリを検索してみる
 }
 ```
 
+# 気づいたこと
+UISearchControllerのsearchResultUpodaterの設定はdidSetの中で行うとうまく反応してくれない。
+viewDidLoadの中で行うべき。
+
 # 参考にした記事
 https://qiita.com/sgr-ksmt/items/e822a379d41462e05e0d
